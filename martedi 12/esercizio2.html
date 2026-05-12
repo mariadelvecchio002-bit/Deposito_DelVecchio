@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+     <!-- ci dice il carattere -->
+        <meta charset="utf-8">
+        <!-- descrizione della pagina -->
+        <meta name="description" content="Esercizio 2">
+        <!-- nome di chi ha creato la pagina, l'autore -->
+        <meta name="author" content="Maria Del Vecchio">
+        <!-- ci dice quanto una pagina si può zoommare o adattare a schermi di dimensioni diverse -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+        <!-- introduzione della pagina -->
+        <header>
+        <h1>Evento</h1>
+        <p>Benvenuto nell'evento!</p>
+        </header>
+<!-- Nav Contiene il link di navigazione -->
+        <nav>
+            <a href="#about">Chi siamo</a>
+            <a href="#programma">Programma</a>
+        </nav>
+<!-- Main= Contenuto principale della pagina -->
+        <main>
+        <section>
+        <h2>Informazioni sull'evento</h2>
+        <p>Data: 15 giugno 2026</p>
+        </section>
+        </main>
+<!-- Article= Contenuto indipendente -->
+        <article>
+    <h2>Programma dell'evento</h2>
+    <p>2 concerti di muisca classica presso l'auditorium comunale</p>
+        </article>
+        <!-- Inserisco immagine -->
+        <img src="auditorium.jpg" alt="Foto dell'auditorium comunale">
+
+        <section id="programma">
+                <h2>Programma dell'evento</h2>
+    <!-- spessore bordo -->
+    <table border="1">
+        <thead>
+        <tr>
+            <!-- titolo ogni colonna -->
+            <th>Orario</th>
+            <th>Titolo</th>
+            <th>Musicista</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <!-- compilo le celle della prima riga -->
+            <td>20:00</td>
+            <td>Concerto di apertura</td>
+            <td>Maestro Rossi</td>
+        </tr>
+        <tr>
+            <td>22:00</td>
+            <td>Concerto di chiusura</td>
+            <td>Maestro Bianchi</td>
+        </tr>
+    </table>
+        </section>
+
+
+<div>
+<!-- form di iscrizione inserisci ciò che ti viene chiesto -->
+ <h2>Form di iscrizione</h2>
+ <form action="#" method="post">
+ <label for="nome">Nome:</label>
+ <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" placeholder="Inserisci la tua password" required>
+</div>
+ 
+<div>
+    <p>Scegli il tuo posto:</p>
+    <input type="radio" id="seduta1" name="seduta" value="dalla 1 alla 100">
+    <label for="seduta1">Dalla 1 alla 100</label>
+    <input type="radio" id="seduta2" name="seduta" value="dalla 101 alla 200">
+    <label for="seduta2">Dalla 101 alla 200</label>
+    
+ </div>
+ 
+ <div>
+    <!-- seleziona dal menu a tendina tipo biglietto -->
+    <label for="tipo biglietto">Biglietto:</label>
+    <select id="biglietto" name="biglietto">
+        <option value="Standard">Standard</option>
+        <option value="Premium">Premium</option>
+</div>
+
+<!-- Inserisco texArea dove poter scrivere note aggiuntive -->
+<div>
+    <label for="note">Note aggiuntive:</label>
+    <textarea id="note" name="note" placeholder="Inserisci note aggiuntive"></textarea>
+</div>
+
+<br/>
+
+<!-- barra la casella se accetti il trattamento dei dati personali -->
+<div>
+    <input type="checkbox" id="si" name="trattamento dati personali" value="si">
+    <label for="si">Accetto il trattamento dei dati personali</label>
+</div>
+
+<!-- pulsante di invio -->
+<div>
+    <input type="submit" value="Invia">
+</div>
+
+</form>
+<!-- footer o pie di pagina -->
+ <footer>
+<p>Copyright 2026</p>
+</footer>
+
+
+    </body>
+</html>
