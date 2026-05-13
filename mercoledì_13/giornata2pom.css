@@ -1,0 +1,87 @@
+/* qui do la posizione relative cioè rispetto il suo normale posizionamento */
+.contenitore {
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+/* posizionamento absolute viene eliminato il flusso normale e si posiziona secondo i comandi top, left ecc che gli ho dato */
+.box {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 100px;
+    height: 50px;
+    background-color: coral;
+}
+/* con justify-content: space-between i miei elementi all'interno del container saranno distanziati in modo uniforme, con align-items li allineo al centro */
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    align-items: center;
+    background-color: lightgray;
+    border: 1.2px solid black;
+}
+/* Centro gli elementi interni */
+.item {
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.2px solid black;
+}
+/* creo 3 colonne uguali usando fr, con gap aggiungo spazio tra righe e colonne */
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 10px;
+    border: 1.2px solid black;
+}
+/* gli elementi verranno posizionati automaticamente  */
+.item2 {
+    background-color: lightcoral;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1.2px solid black;
+}
+
+.container3 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+    border: 1.2px solid black;
+}
+
+.item4 {
+    grid-column: 1 / 3; /* l'elemento occuperà le prime due colonne */
+    grid-row: 1; /* l'elemento occuperà la prima riga */;
+}
+
+.item5 {
+    grid-column: 3; /* l'elemento occuperà la terza colonna */
+    grid-row: 1 / 3; /* l'elemento occuperà entrambe le righe */
+}
+
+/* templeate areas con header occupo la prima riga, sidebar e content la seconda, footer la terza */
+.container4 {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+        grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    border: 1.2px solid black;
+}
+
+.header { grid-area: header;}
+.sidebar { grid-area: sidebar;}
+.content { grid-area: content;}
+.footer { grid-area: footer;}
