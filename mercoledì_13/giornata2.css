@@ -1,0 +1,81 @@
+ /* la regola che viene applicata se uguali (stessa specifictà) è l'ultima dichiarata, in questo caso la seconda */
+ p {
+     color: blue;
+ }
+
+ p {
+     color: red;
+ }
+
+ /* ereditarietà: se non specifico un colore per un elemento, eredita quello del genitore, in questo caso il div */
+ div {
+     color: green;
+ }
+
+ /* qui il p viene battuto dalla classe, la classe viene battuta dall'id, quindi il colore del testo è rosso */
+ p {
+     color: blue;
+ }
+
+ .testo {
+     color: orange;
+ }
+
+ #titolo {
+     color: red;
+ }
+
+ /*  prova in cui metto comandi che non si contraddigono */
+ p {
+     color: blue;
+ }
+
+ .testo {
+     front-size: 24px;
+ }
+
+ #titolo {
+     background-color: lightgray;
+ }
+
+ /* do comandi a tutto il body */
+ body {
+     background-color: lightblue;
+     padding: 20px;
+ }
+
+ /* voglio che però la mia classe abbia un colore di background diverso da quello del body */
+ .box {
+     background-color: red;
+     font-size: 18px;
+ }
+
+ /* do comandi ad h1 e p, ma con classi diverse, in questo modo posso avere stili diversi per h1 e p, anche se sono entrambi all'interno del body */
+ .h1 {
+     color: green;
+     font-size: 32px;
+     line-height: 1.2;
+ }
+
+ .p {
+     color: purple;
+     font-size: 16px;
+     line-height: 1.6;
+ }
+
+ /* in questo modo il mio div occuperà solo lo spazio che gli ho detto io non tutto come gli altri div, che occupano tutto lo spazio */
+ .lol {
+     width: 200px;
+     height: 100px;
+     background-color: yellow;
+ }
+
+ /* il padding lavora su tutti i lati aggiunge spazio tra contenuto e bordo, non lavora sul div ma sul contenuto del div */
+ .provaP {
+     padding: 10px;
+     background-color: lightgreen;
+ }
+
+ .div {
+    border: 5px solid black;
+ }

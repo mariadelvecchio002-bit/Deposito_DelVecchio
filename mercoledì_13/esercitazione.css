@@ -1,0 +1,38 @@
+/* do al body sfondo font */
+body {
+    background-color: lightblue;
+    font-family: Arial;
+
+}
+/* titolo  colore nero e posizionamento relativo*/
+#titolo {
+     color: black;
+     position:relative
+ }
+/* classe=colore sfondo voglio sia diverso dal body, unità em, px, padding e border */
+.lol {
+    background-color: red;
+    border: 2px solid black;
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 2rem;
+}
+/* classe box specifico colore sfondo (diverso body), padding e dimensioni, in questo modo il padding sarà relativo alla dimensione del box e non a quella del body */
+.box {
+    background-color: lightgray;
+    width: 300px;
+    height: 150px;
+    padding: 10%;
+}
+/* regola in conflitto: se dicono stessa cosa applico l'ultima dichiarata (il mio p sarà verde) */
+p {
+    color: blue;
+}
+p{
+    color: green;
+}
+
+/* pseudo classe applico lo stile al bottone quando il mouse passa sopra */
+    button:hover {
+        color: red;
+    }
