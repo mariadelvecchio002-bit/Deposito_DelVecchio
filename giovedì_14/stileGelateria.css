@@ -1,0 +1,127 @@
+/* definisco nella root le variabili globali per la coerenza visiva */
+:root {
+    --colore-principale: #ffb6c1;
+    --colore-testo: white;
+
+}
+
+/* inserisco caratteristiche del mio body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Colore del testo */
+    color: var(--colore-testo);
+}
+
+header {
+    background-color: var(--colore-principale);
+    padding: 20px;
+    /* Centro il testo */
+    text-align: center;
+
+}
+
+nav ul {
+    /* Elimina spazio interno */
+    padding: 0;
+}
+
+
+nav li {
+    /* Metto gli elementi della listain orizzontale */
+    display: inline-block;
+    /* Distanza tra i vari gusti della lista */
+    margin: 10px;
+}
+
+.descrizione {
+    /* Sfondo */
+    background-color: #ffe4e1;
+    /* Spazio interno */
+    padding: 40px;
+    /* Margine */
+    margin: 30px;
+    /* Testo centrato */
+    text-align: center;
+}
+
+/* classe gusti */
+.gusti {
+
+    /* Sfondo */
+    background-color: #ffe4e1;
+    /* Margine */
+    margin: 30px;
+    /* Spazio interno */
+    padding: 30px;
+    /* Testo centrato */
+    text-align: center;
+    color: black;
+}
+
+
+/* Classe lista-gusti faccio flexbox */
+.lista-gusti {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* transition crea un effetto fluido di transizione, animation cambio colore 3s esegue all'infinito l'animazione ogni 3s */
+.promo {
+    width: 300px;
+    margin: 40px;
+    padding: 20px;
+    background-color: #ffb6c1;
+    transition: transform 0.5s;
+    border: 3px solid var(--colore-principale);
+    animation: cambioColore 3s infinite;
+    text-align: center;
+    position: relative
+}
+
+/* transform ingrandisce la box al passaggio del mouse */
+.promo:hover {
+    transform: scale(1.2);
+}
+
+/* keyframes definisce le fasi dell'animazione */
+@keyframes cambioColore {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+        background-color: rgb(236, 149, 206);
+    }
+
+    100% {
+        background-color: white;
+    }
+
+    /* pseudo elemento aggiungo con before un elemento prima del contenuto della promo  */
+    .promo::before {
+        content: "NEW";
+        color: black;
+    }
+
+
+
+    footer {
+        background-color: var(--colore-principale);
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+        color: black;
+    }
+
+
+    /* visibility hidden:l'elemento è invisibile ma occupa ancora spazio */
+    .hidden {
+        visibility: hidden;
+    }
+
+    /* none: l'elemento viene rimosso completamente, non occupa spazio e non è visibile  */
+    .none {
+        display: none;
+    }

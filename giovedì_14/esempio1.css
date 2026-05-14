@@ -1,0 +1,68 @@
+/* definisco nella root delle variabili globali che posso richiamare ovunque nel codice, servono a richiamare coerenza visiva */
+:root {
+    --colore-principale: #3498db;
+    --colore-testo: black;
+    --spaziatura: 20px;
+}
+
+/* richiamo alcune variabili della root nella classe card */
+.card {
+    background-color: var(--colore-principale);
+    padding: var(--spaziatura);
+    color: white;
+}
+
+/* richiamo la variabile del colore del testo nella classe h1 */
+h1 {
+    color: var(--colore-testo);
+}
+
+.messaggio::before {
+    content: "Alt ";
+    color: red;
+}
+
+.messaggio::after {
+    content: " X";
+    color: green;
+}
+/* transition crea un effetto fluido di transizione, animation cambio colore 3s esegue all'infinito l'animazione ogni 3s */
+.box {
+width: 100px;
+height: 100px;
+background-color: steelblue;
+transition: transform 0.5s;
+animation: cambioColore 3s infinite;
+}
+/* transform ingrandisce la box al passaggio del mouse */
+.box:hover {
+transform: scale(1.2);
+}
+/* keyframes definisce le fasi dell'animazione */
+@keyframes cambioColore {
+0% {
+background-color: steelblue;
+}
+
+50% {
+background-color: coral;
+}
+
+100% {
+background-color: steelblue;
+}
+/* viene visualizza normalmente l'elemento */
+.box1 {
+    display:block;
+    background-color: lightcoral;
+}
+/* l'elemento è invisibile ma occupa spazio */
+.box2 {
+    visibility: hidden;
+    background-color: lightblue;
+}
+/* l'elemento viene rimosso non occupa spazio e non è visibile */
+.box3 {
+    display: none;
+    background-color: lightgreen;
+}
