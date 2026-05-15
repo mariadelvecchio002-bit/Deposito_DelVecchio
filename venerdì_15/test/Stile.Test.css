@@ -1,0 +1,135 @@
+/* do uno stile al body*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0ac8d;
+    color: #333;
+}
+
+/* stile dell'header */
+header {
+    background-color: #f0ac8d;
+    padding: 20px;
+
+    /* Flex serve per mettere elementi in riga */
+    display: flex;
+
+    /* Spazio tra logo e menu */
+    justify-content: space-between;
+
+    /* Allineamento verticale */
+    align-items: center;
+}
+
+/* stile della nav*/
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* menù */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* stile sezione box */
+.box {
+    display: flex;
+    flex-direction: column; /*metto gli elementi uno sotto l'altro*/
+    align-items:center; /*centro gli elementi*/
+    text-align: center; /*centro il testo*/
+    padding: 80 px 20 px; /*spazio sopra e sotto*/
+    background-color: #f4b79b;
+}
+
+/* stile titolo sezione box */
+.box h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* stile testo box */
+.box p {
+    margin-bottom: 20px;
+}
+
+/*bottone*/
+button {
+    background-color:#ff9e72;;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* hover=cioè quando il mouse passa sopra cambia il colore del bottone diventa più scuro */
+button:hover {
+    background-color: #ff9462;
+}
+
+/* stile delle section */
+section {
+    padding: 60px 20px;
+}
+
+/* classe cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* singola card */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    /* Ombra leggera */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* galleria */
+.gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* box immagini */
+.box {
+    background-color: #f8d7da;
+    height: 200px;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+/* stile form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+/* INPUT E TEXTAREA */
+input,
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+}
